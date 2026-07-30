@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "colorize"
+version = "0.1.0"
+description = "A CLI tool to colorize a PNG image to a solid target color while preserving transparency."
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "Pillow>=9.0.0",
+]
+
+[project.scripts]
+# This line creates the global terminal command 'colorize'
+colorize = "colorize.cli:main"
